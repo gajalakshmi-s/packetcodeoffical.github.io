@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<h2>Animated Accordion</h2>
+<p>Click on the buttons to open the collapsible content.</p>
+
+
+
+
+
+<div class="row m-n">
+<div class="mbCollapse p-xs col-md-12 col-sm-12 p-b-none">
+   
+    <div class="panel-group col-md-12 m-n" id="accordion2" role="tablist" aria-multiselectable="true">
+      
+        <div class="">
+            <div class="rows b-light p-n accordion">
+                
+                <div class="p-t-md p-b-md">
+                   <div class="i-checks">
+                    <a>
+                        
+                       <span class="clearfix">				    		
+							<span class="col-md-12 acc-line-card col-xs-11 p-n text-sm font-bold scrnTxt0">ASDASF</span>
+                           
+                            <span class="font-bold mobCard-plusIcon"><span class="glyphicon p-n pull-right glyphicon-minus m-l-xs"></span>           
+                            </span>
+
+                   
+                    </a>
+					</div>
+                </div>
+            </div>
+            <div id="collapse0" class="m-l-xs p-r p-b-xs panel-collapse collapse in panel" >
+                <div class="m-l m-r hide">
+                    <div class="sep"></div>
+                </div>
+                <div class="panel-body p-n">
+                        sdfsdgsdgsdgsdgsdg
+                </div>
+            </div>
+            
+        </div>
+		
+		
+
+	
+       
+        </div>
+       
+    </div>
+   
+</div>	
+
+
+
+
+
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+  debugger
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
+
+
